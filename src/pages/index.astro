@@ -1,90 +1,137 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const posts = await Astro.glob('./posts/*.md');
+const posts = await Astro.glob('./posts/*.md').catch(() => []);
 ---
-<Layout title="Bedardi Bhai - Premium Web & App Developer" description="5+ years experienced developer building top-notch software.">
+<Layout title="Premium Software Company in Aurangabad" description="Top-rated Website & Mobile App Development Company offering customized solutions.">
   
-  <!-- HERO SECTION -->
-  <section class="max-w-4xl mx-auto px-6 py-12 flex flex-col items-center text-center">
+  <!-- PREMIUM HERO SECTION -->
+  <section class="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col lg:flex-row items-center justify-between gap-12 animate-fade-in-up">
     
-    <div class="inline-flex items-center space-x-2 bg-white border border-gray-200 px-4 py-2 rounded-full text-xs font-bold text-gray-600 mb-6 shadow-sm">
-      <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
-      <span>Accepting New Local Projects</span>
+    <div class="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+      <div class="inline-flex items-center space-x-2 glass-panel px-4 py-2 rounded-full text-[11px] font-bold text-slate-600 uppercase tracking-widest shadow-sm">
+        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+        <span>Top Rated Agency in Bihar</span>
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.05]">
+        Engineered for <br />
+        <span class="gradient-text">Massive Scale.</span>
+      </h1>
+      
+      <p class="text-lg text-slate-600 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
+        We build robust Web Applications, Flutter Apps, and provide complete SEO solutions. Trusted by businesses in Aurangabad, Pune, and the United States.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+        <a href="https://wa.me/917870692939" class="w-full sm:w-auto bg-primary hover:bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-sm shadow-xl shadow-primary/30 transition-transform active:scale-95 flex items-center justify-center">
+          Start Your Project <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        <a href="tel:07870692939" class="w-full sm:w-auto glass-panel text-slate-800 px-8 py-4 rounded-2xl font-bold text-sm hover:bg-slate-50 transition-transform active:scale-95 flex items-center justify-center">
+          <i class="fas fa-phone-alt mr-2 text-indigo-500"></i> 078706 92939
+        </a>
+      </div>
     </div>
-    
-    <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-app-dark leading-tight mb-6">
-      Building Digital Assets That <br class="hidden md:block"/>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">Scale Your Business</span>
-    </h1>
-    
-    <p class="text-lg text-gray-600 max-w-2xl mb-10">
-      Hi, I'm <strong>Bedardi Bhai</strong>, a full-stack developer with 5+ years of experience. I craft custom high-performance websites, mobile apps, and billing softwares.
-    </p>
-    
-    <!-- Screenshot Style Buttons -->
-    <div class="flex flex-col w-full sm:w-auto gap-4 sm:min-w-[350px]">
-      <a href="tel:+917870692939" class="w-full bg-app-blue hover:bg-blue-700 text-white py-4 rounded-2xl font-bold shadow-md transition-transform active:scale-95 flex items-center justify-center text-lg">
-        <i class="fas fa-phone-alt mr-3"></i> Call: +91 78706 92939
-      </a>
-      <a href="https://wa.me/917870692939" target="_blank" class="w-full bg-app-dark hover:bg-gray-900 text-white py-4 rounded-2xl font-bold shadow-md transition-transform active:scale-95 flex items-center justify-center text-lg">
-        <i class="fab fa-whatsapp mr-3 text-green-400"></i> Discuss on WhatsApp &rarr;
-      </a>
-    </div>
-  </section>
 
-  <!-- SERVICES SECTION (With Gradient Borders) -->
-  <section id="services" class="py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-10 text-app-dark">My Expertise</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="w-full lg:w-1/2 relative h-[400px] hidden md:block animate-float">
+      <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500 to-pink-500 rounded-[3rem] opacity-20 blur-2xl"></div>
+      <div class="glass-panel w-full h-full rounded-[2.5rem] p-8 border border-white/40 shadow-2xl relative overflow-hidden flex flex-col justify-center">
+        <div class="flex items-center space-x-4 mb-6">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl"><i class="fab fa-react"></i></div>
+          <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl"><i class="fab fa-node-js"></i></div>
+          <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center text-xl"><i class="fab fa-wordpress"></i></div>
+        </div>
+        <h3 class="text-2xl font-black text-slate-800 mb-2">Modern Tech Stack</h3>
+        <p class="text-sm font-medium text-slate-500">React, Node.js, Flutter, Laravel & UI/UX Design.</p>
         
-        <!-- Service Card 1 -->
-        <div class="rounded-[1.25rem] p-[2px] bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 shadow-sm hover:shadow-md transition">
-          <div class="bg-white p-8 rounded-[1.2rem] h-full flex flex-col items-start">
-            <div class="w-12 h-12 bg-blue-50 text-app-blue rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-laptop-code"></i></div>
-            <h3 class="text-xl font-bold mb-2 text-app-dark">Custom Web Apps</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">Fast, SEO-optimized, and secure web applications tailored to streamline operations.</p>
-          </div>
-        </div>
-
-        <!-- Service Card 2 -->
-        <div class="rounded-[1.25rem] p-[2px] bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 shadow-sm hover:shadow-md transition">
-          <div class="bg-white p-8 rounded-[1.2rem] h-full flex flex-col items-start">
-            <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-mobile-alt"></i></div>
-            <h3 class="text-xl font-bold mb-2 text-app-dark">Mobile Apps</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">Cross-platform mobile apps with rich UI/UX for both Android and iOS devices.</p>
-          </div>
-        </div>
-
-        <!-- Service Card 3 -->
-        <div class="rounded-[1.25rem] p-[2px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 shadow-sm hover:shadow-md transition">
-          <div class="bg-white p-8 rounded-[1.2rem] h-full flex flex-col items-start">
-            <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-xl flex items-center justify-center text-xl mb-4"><i class="fas fa-store"></i></div>
-            <h3 class="text-xl font-bold mb-2 text-app-dark">Billing Software</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">Inventory management and POS systems specifically designed for local stores.</p>
-          </div>
-        </div>
-
+        <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-pink-500/10 rounded-full blur-xl"></div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects" class="py-16 max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-10 text-app-dark">Recent Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {posts.map((post) => (
-        <div class="rounded-[1.25rem] p-[2px] bg-gradient-to-br from-gray-200 to-gray-300 hover:from-blue-400 hover:to-purple-500 transition-all duration-300">
-          <a href={post.url} class="block bg-white p-8 rounded-[1.2rem] h-full">
-            <span class="text-xs font-bold text-app-blue uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-md">{post.frontmatter.category || 'Case Study'}</span>
-            <h3 class="text-2xl font-bold text-app-dark mt-4 mb-2">{post.frontmatter.title}</h3>
-            <p class="text-gray-500 mb-6 line-clamp-2 text-sm">{post.frontmatter.description}</p>
-            <div class="w-full bg-app-dark text-white py-3 rounded-xl font-bold text-center text-sm shadow-sm">
-              Read Details &rarr;
-            </div>
-          </a>
+  <!-- SERVICES (Glassmorphism UI) -->
+  <section id="services" class="py-20 relative">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 animate-fade-in-up">
+        <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Enterprise-Grade Services</h2>
+        <p class="text-slate-500 font-medium">End-to-end digital solutions from UI/UX to cloud deployment.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel p-10 rounded-[2rem] hover:-translate-y-2 transition duration-300 group">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition"><i class="fas fa-mobile-alt"></i></div>
+          <h3 class="text-2xl font-bold mb-3 text-slate-800">Mobile Apps</h3>
+          <p class="text-slate-500 text-sm leading-relaxed font-medium">Native Android, iOS & Flutter App Development with API integration and security updates.</p>
         </div>
-      ))}
+        
+        <div class="glass-panel p-10 rounded-[2rem] hover:-translate-y-2 transition duration-300 group">
+          <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition"><i class="fas fa-globe"></i></div>
+          <h3 class="text-2xl font-bold mb-3 text-slate-800">Web Development</h3>
+          <p class="text-slate-500 text-sm leading-relaxed font-medium">Custom Website Design, eCommerce, and high-performance Web Applications.</p>
+        </div>
+
+        <div class="glass-panel p-10 rounded-[2rem] hover:-translate-y-2 transition duration-300 group">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-lg group-hover:scale-110 transition"><i class="fas fa-search-location"></i></div>
+          <h3 class="text-2xl font-bold mb-3 text-slate-800">SEO & Marketing</h3>
+          <p class="text-slate-500 text-sm leading-relaxed font-medium">Technical SEO, Local SEO, Google Business Optimization, and speed enhancement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAL SEO & TRUST SECTION -->
+  <section id="local" class="py-20 bg-slate-900 text-white my-10 rounded-[3rem] mx-4 md:mx-10 relative overflow-hidden shadow-2xl">
+    <div class="absolute right-0 top-0 w-96 h-96 bg-primary/30 rounded-full blur-[100px]"></div>
+    <div class="max-w-6xl mx-auto px-8 relative z-10 flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2">
+        <h2 class="text-4xl font-extrabold mb-6">Proudly Local, Thinking Global.</h2>
+        <p class="text-slate-300 mb-8 text-lg font-medium leading-relaxed">
+          Based in <strong>Gaiwal Bigha, Aurangabad</strong>, we serve clients locally and across the United States. We are officially verified as a top Software Company on Google.
+        </p>
+        <div class="flex items-center space-x-4 bg-white/10 p-4 rounded-2xl border border-white/10 w-max">
+          <div class="text-yellow-400 text-2xl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <span class="font-bold text-sm tracking-widest">5.0 GOOGLE RATING</span>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Client Review Cards -->
+        <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+          <p class="text-slate-300 text-sm italic mb-4">"MistaHub transformed our local business with a seamless billing software. Best engineers in Bihar!"</p>
+          <p class="font-bold text-white text-sm">- Local Supermarket</p>
+        </div>
+        <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 mt-0 sm:mt-8">
+          <p class="text-slate-300 text-sm italic mb-4">"The Flutter app they built for us is incredibly fast. Excellent UI/UX design and communication."</p>
+          <p class="font-bold text-white text-sm">- Tech Startup, Pune</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section id="projects" class="py-20 max-w-6xl mx-auto px-6">
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <h2 class="text-4xl font-extrabold text-slate-900 mb-2">Our Portfolio</h2>
+        <p class="text-slate-500 font-medium">Recent case studies and live projects.</p>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {posts.length > 0 ? posts.map((post) => (
+        <a href={post.url} class="group block glass-panel rounded-[2rem] overflow-hidden hover:shadow-xl hover:-translate-y-2 transition duration-300">
+          <div class="p-8">
+            <span class="text-[10px] font-extrabold text-primary uppercase tracking-widest bg-indigo-50 px-3 py-1.5 rounded-lg">{post.frontmatter.category || 'Project'}</span>
+            <h3 class="text-2xl font-extrabold text-slate-900 mt-4 mb-3 group-hover:text-primary transition">{post.frontmatter.title}</h3>
+            <p class="text-slate-500 mb-8 font-medium line-clamp-2">{post.frontmatter.description}</p>
+            <div class="inline-flex items-center font-bold text-slate-900 group-hover:text-primary transition text-sm">
+              View Case Study <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition transform"></i>
+            </div>
+          </div>
+        </a>
+      )) : (
+        <div class="col-span-2 text-center p-12 glass-panel rounded-[2rem]">
+          <p class="text-slate-500 font-bold">New case studies are being updated. Contact us directly to see our recent work!</p>
+        </div>
+      )}
     </div>
   </section>
 </Layout>
