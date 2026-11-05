@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MistaHub Agency — We Build Digital Experiences</title>
+  <meta name="description" content="MistaHub builds modern websites, web applications, mobile apps and custom software. Let's turn your ideas into powerful digital products.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#080910">
+  <link rel="canonical" href="https://agency.mistahub.in/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MistaHub Agency — Build Something Extraordinary">
+  <meta property="og:description" content="We design and develop powerful digital products for ambitious businesses.">
+  <meta property="og:url" content="https://agency.mistahub.in/">
+  <meta property="og:site_name" content="MistaHub Agency">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MistaHub Agency">
+  <meta name="twitter:description" content="Digital solutions built for growth.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "MistaHub Agency",
+    "url": "https://agency.mistahub.in/",
+    "telephone": "+917870692939",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gaiwal Bigha",
+      "addressLocality": "Aurangabad",
+      "addressRegion": "Bihar",
+      "postalCode": "824103",
+      "addressCountry": "IN"
+    },
+    "areaServed": ["India", "Worldwide"],
+    "priceRange": "Contact for pricing"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #080910;
+      --surface: #10111d;
+      --surface2: #151625;
+      --white: #f7f7ff;
+      --muted: #9293a8;
+      --purple: #9865ff;
+      --cyan: #42d9e9;
+      --border: rgba(255,255,255,.09);
+      --radius: 22px;
+      --font: 'DM Sans', sans-serif;
+      --heading: 'Space Grotesk', sans-serif;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    html { scroll-behavior:smooth; scroll-padding-top:90px; }
+
+    body {
+      background:var(--bg);
+      color:var(--white);
+      font-family:var(--font);
+      overflow-x:hidden;
+      line-height:1.6;
+    }
+
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      background:
+        radial-gradient(ellipse at 10% 10%,rgba(123,65,255,.10),transparent 40%),
+        radial-gradient(ellipse at 90% 45%,rgba(32,193,225,.07),transparent 35%);
+    }
+
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; }
+    img { max-width:100%; display:block; }
+
+    .container {
+      width:min(1160px, calc(100% - 44px));
+      margin:auto;
+    }
+
+    .section { padding:105px 0; }
+
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      color:#bda4ff;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:17px;
+    }
+
+    .eyebrow::before {
+      content:"";
+      width:22px;
+      height:2px;
+      background:var(--purple);
+    }
+
+    h1,h2,h3,h4 { font-family:var(--heading); line-height:1.13; }
+
+    .section-heading {
+      max-width:690px;
+      margin-bottom:48px;
+    }
+
+    .section-heading h2 {
+      font-size:clamp(32px,5vw,49px);
+      letter-spacing:-2px;
+      margin-bottom:16px;
+    }
+
+    .section-heading p {
+      color:var(--muted);
+      max-width:590px;
+      font-size:15px;
+    }
+
+    .gradient-text {
+      background:linear-gradient(100deg,#b69aff 5%,#8b69ff 48%,#48d7e8 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 21px;
+      border-radius:12px;
+      font-size:14px;
+      font-weight:700;
+      border:1px solid transparent;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+
+    .btn-primary {
+      background:linear-gradient(110deg,#8756f8,#6840dc);
+      color:white;
+      box-shadow:0 8px 30px rgba(125,78,255,.24);
+    }
+
+    .btn-primary:hover {
+      transform:translateY(-3px);
+      box-shadow:0 12px 35px rgba(125,78,255,.4);
+    }
+
+    .btn-outline {
+      border-color:var(--border);
+      background:rgba(255,255,255,.035);
+    }
+
+    .btn-outline:hover {
+      border-color:var(--purple);
+      background:rgba(142,96,255,.10);
+      transform:translateY(-3px);
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      position:fixed;
+      top:0; left:0; right:0;
+      z-index:1000;
+      background:rgba(8,9,16,.78);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid transparent;
+      transition:.3s;
+    }
+
+    .navbar.scrolled { border-color:var(--border); }
+
+    .nav-inner {
+      height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:11px;
+      font-family:var(--heading);
+      font-size:21px;
+      font-weight:700;
+      letter-spacing:-1px;
+    }
+
+    .logo-icon {
+      width:37px;
+      height:37px;
+      display:grid;
+      place-items:center;
+      border-radius:11px;
+      background:linear-gradient(135deg,#9664ff,#4932a9);
+      box-shadow:0 5px 20px rgba(140,89,255,.3);
+      font-size:20px;
+    }
+
+    .logo span { color:#aa8aff; }
+
+    .nav-links {
+      display:flex;
+      align-items:center;
+      gap:31px;
+      list-style:none;
+    }
+
+    .nav-links a {
+      font-size:13px;
+      color:#b5b5c7;
+      transition:.2s;
+    }
+
+    .nav-links a:hover { color:white; }
+
+    .nav-cta { padding:11px 17px; font-size:13px; }
+
+    .menu-toggle {
+      display:none;
+      background:none;
+      border:0;
+      color:white;
+      font-size:26px;
+      cursor:pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height:750px;
+      padding:160px 0 100px;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      align-items:center;
+      gap:45px;
+    }
+
+    .hero-badge {
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      border:1px solid rgba(157,115,255,.25);
+      background:rgba(132,89,255,.09);
+      color:#c4afff;
+      border-radius:30px;
+      padding:8px 14px;
+      font-size:12px;
+      margin-bottom:27px;
+    }
+
+    .pulse {
+      width:7px;height:7px;
+      border-radius:50%;
+      background:#58e8a7;
+      box-shadow:0 0 12px #58e8a7;
+    }
+
+    .hero h1 {
+      font-size:clamp(43px,6.3vw,76px);
+      letter-spacing:-4px;
+      font-weight:700;
+      line-height:1.04;
+      margin-bottom:24px;
+    }
+
+    .hero-copy {
+      max-width:540px;
+      color:#a6a7b9;
+      font-size:16px;
+      line-height:1.85;
+      margin-bottom:32px;
+    }
+
+    .hero-actions {
+      display:flex;
+      gap:13px;
+      flex-wrap:wrap;
+    }
+
+    .hero-note {
+      margin-top:29px;
+      color:#797b91;
+      font-size:12px;
+    }
+
+    .hero-note strong { color:#c8c4db; }
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      min-height:440px;
+      position:relative;
+      display:grid;
+      place-items:center;
+    }
+
+    .orbit {
+      position:absolute;
+      width:380px;
+      height:380px;
+      border:1px solid rgba(155,117,255,.16);
+      border-radius:50%;
+      animation:rotate 35s linear infinite;
+    }
+
+    .orbit.two {
+      width:295px;height:295px;
+      border-color:rgba(66,217,233,.16);
+      animation-direction:reverse;
+      animation-duration:25s;
+    }
+
+    @keyframes rotate { to { transform:rotate(360deg); } }
+
+    .orbit-dot {
+      position:absolute;
+      width:12px;height:12px;
+      border-radius:50%;
+      background:#a17aff;
+      box-shadow:0 0 20px #a17aff;
+      top:42px;left:52px;
+    }
+
+    .orbit.two .orbit-dot {
+      background:var(--cyan);
+      box-shadow:0 0 20px var(--cyan);
+      top:auto;left:auto;right:26px;bottom:35px;
+    }
+
+    .dashboard {
+      position:relative;
+      width:100%;
+      max-width:420px;
+      padding:20px;
+      border:1px solid rgba(255,255,255,.13);
+      background:linear-gradient(145deg,rgba(28,27,51,.94),rgba(13,15,27,.96));
+      border-radius:22px;
+      box-shadow:0 30px 90px rgba(0,0,0,.4);
+      z-index:2;
+      animation:float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,100% { transform:translateY(0); }
+      50% { transform:translateY(-13px); }
+    }
+
+    .dash-top {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:1px solid var(--border);
+      padding-bottom:15px;
+      margin-bottom:20px;
+    }
+
+    .dash-brand {
+      display:flex;
+      align-items:center;
+      gap:9px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .dash-brand-icon {
+      width:27px;height:27px;
+      display:grid;place-items:center;
+      background:#8055eb;
+      border-radius:8px;
+    }
+
+    .dash-status {
+      color:#5ce5a5;
+      font-size:10px;
+      background:rgba(64,220,151,.1);
+      padding:5px 9px;
+      border-radius:20px;
+    }
+
+    .dash-label { color:#9698ad;font-size:11px; }
+
+    .dash-title {
+      font-size:23px;
+      font-weight:700;
+      margin:5px 0 19px;
+    }
+
+    .dash-stats {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .stat-box {
+      padding:15px;
+      background:rgba(255,255,255,.045);
+      border:1px solid var(--border);
+      border-radius:13px;
+    }
+
+    .stat-box span {
+      display:block;
+      font-size:11px;
+      color:#9294aa;
+      margin-bottom:8px;
+    }
+
+    .stat-box strong { font-size:20px; }
+
+    .chart {
+      height:100px;
+      display:flex;
+      align-items:end;
+      gap:9px;
+      padding:14px 5px 0;
+    }
+
+    .bar {
+      flex:1;
+      border-radius:5px 5px 0 0;
+      background:linear-gradient(to top,#7146d6,#4dd3df);
+      opacity:.85;
+    }
+
+    .bar:nth-child(1){height:35%}
+    .bar:nth-child(2){height:55%}
+    .bar:nth-child(3){height:44%}
+    .bar:nth-child(4){height:75%}
+    .bar:nth-child(5){height:58%}
+    .bar:nth-child(6){height:88%}
+    .bar:nth-child(7){height:100%}
+
+    .floating-card {
+      position:absolute;
+      z-index:3;
+      background:#17182a;
+      border:1px solid var(--border);
+      border-radius:13px;
+      padding:13px 16px;
+      box-shadow:0 15px 40px rgba(0,0,0,.3);
+      font-size:12px;
+    }
+
+    .floating-card.one { top:35px;right:-3px; }
+    .floating-card.two { bottom:38px;left:-14px; }
+
+    .floating-card strong {
+      display:block;
+      font-size:14px;
+      margin-top:4px;
+    }
+
+    /* TECH STACK */
+
+    .tech-strip {
+      padding:25px 0;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      background:rgba(255,255,255,.015);
+    }
+
+    .tech-inner {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .tech-label {
+      color:#77798e;
+      font-size:11px;
+      letter-spacing:1.4px;
+      font-weight:800;
+    }
+
+    .tech-list {
+      display:flex;
+      gap:29px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .tech-list span {
+      color:#b5b5c7;
+      font-family:var(--heading);
+      font-size:14px;
+      font-weight:600;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:17px;
+    }
+
+    .service-card {
+      padding:29px 25px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+      transition:.3s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .service-card::after {
+      content:"";
+      position:absolute;
+      width:150px;height:150px;
+      background:rgba(139,92,246,.10);
+      filter:blur(55px);
+      right:-80px;bottom:-90px;
+      opacity:0;
+      transition:.3s;
+    }
+
+    .service-card:hover {
+      transform:translateY(-7px);
+      border-color:rgba(151,105,255,.42);
+      background:linear-gradient(145deg,rgba(123,83,226,.10),rgba(255,255,255,.02));
+    }
+
+    .service-card:hover::after { opacity:1; }
+
+    .service-icon {
+      width:49px;height:49px;
+      display:grid;place-items:center;
+      font-size:22px;
+      border-radius:14px;
+      margin-bottom:24px;
+      background:rgba(142,100,255,.14);
+      border:1px solid rgba(142,100,255,.20);
+    }
+
+    .service-card:nth-child(2n) .service-icon {
+      background:rgba(66,217,233,.10);
+      border-color:rgba(66,217,233,.17);
+    }
+
+    .service-card h3 { font-size:19px;margin-bottom:11px; }
+
+    .service-card p {
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .service-link {
+      display:inline-flex;
+      gap:7px;
+      align-items:center;
+      margin-top:23px;
+      font-size:12px;
+      font-weight:700;
+      color:#b59aff;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .about-visual {
+      min-height:390px;
+      border-radius:25px;
+      border:1px solid var(--border);
+      background:
+        radial-gradient(circle at 30% 35%,rgba(133,89,255,.25),transparent 40%),
+        radial-gradient(circle at 80% 80%,rgba(52,207,224,.16),transparent 35%),
+        #111321;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .about-symbol {
+      font-family:var(--heading);
+      font-size:150px;
+      font-weight:700;
+      letter-spacing:-15px;
+      color:transparent;
+      -webkit-text-stroke:2px rgba(188,159,255,.65);
+      text-shadow:0 0 65px rgba(144,92,255,.25);
+    }
+
+    .about-chip {
+      position:absolute;
+      padding:11px 15px;
+      background:#1a1b2c;
+      border:1px solid var(--border);
+      border-radius:11px;
+      font-size:12px;
+    }
+
+    .about-chip.a { top:25px;left:22px; }
+    .about-chip.b { right:22px;bottom:25px; }
+
+    .about-content h2 {
+      font-size:clamp(33px,4vw,48px);
+      letter-spacing:-2px;
+      margin-bottom:19px;
+    }
+
+    .about-content > p {
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.9;
+      margin-bottom:17px;
+    }
+
+    .about-points {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:15px;
+      margin:27px 0 30px;
+    }
+
+    .about-point {
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-size:13px;
+      color:#d6d5e3;
+    }
+
+    .check {
+      width:21px;height:21px;
+      display:grid;place-items:center;
+      background:rgba(77,224,169,.12);
+      color:#65e7b1;
+      border-radius:50%;
+      font-size:12px;
+      flex-shrink:0;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .project-card {
+      overflow:hidden;
+      border:1px solid var(--border);
+      border-radius:21px;
+      background:#11121e;
+      transition:.3s;
+    }
+
+    .project-card:hover {
+      transform:translateY(-5px);
+      border-color:rgba(144,99,255,.4);
+    }
+
+    .project-preview {
+      min-height:245px;
+      padding:25px;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(135deg,#1c1740,#101a31);
+    }
+
+    .project-card:nth-child(2) .project-preview {
+      background:linear-gradient(135deg,#102b36,#13152d);
+    }
+
+    .project-card:nth-child(3) .project-preview {
+      background:linear-gradient(135deg,#301b42,#16132b);
+    }
+
+    .project-card:nth-child(4) .project-preview {
+      background:linear-gradient(135deg,#192b43,#111323);
+    }
+
+    .mock-window {
+      width:90%;
+      max-width:390px;
+      border-radius:13px;
+      background:#171a2b;
+      border:1px solid rgba(255,255,255,.16);
+      overflow:hidden;
+      box-shadow:0 20px 50px rgba(0,0,0,.35);
+      transform:rotate(-2deg);
+      transition:.4s;
+    }
+
+    .project-card:hover .mock-window { transform:rotate(0) scale(1.035); }
+
+    .mock-top {
+      padding:10px 13px;
+      border-bottom:1px solid var(--border);
+      display:flex;
+      gap:5px;
+    }
+
+    .mock-top i {
+      width:7px;height:7px;
+      border-radius:50%;
+      background:#8062e9;
+    }
+
+    .mock-content { padding:17px; }
+
+    .mock-title {
+      font-family:var(--heading);
+      font-size:19px;
+      font-weight:700;
+      margin-bottom:13px;
+    }
+
+    .mock-line {
+      height:8px;
+      border-radius:5px;
+      background:rgba(255,255,255,.12);
+      margin-bottom:8px;
+      width:85%;
+    }
+
+    .mock-line.short { width:53%; }
+
+    .mock-blocks {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+      margin-top:15px;
+    }
+
+    .mock-block {
+      height:52px;
+      background:linear-gradient(135deg,rgba(145,102,255,.4),rgba(61,210,227,.12));
+      border-radius:7px;
+    }
+
+    .project-info { padding:24px; }
+
+    .project-category {
+      color:#aa8bff;
+      font-size:10px;
+      letter-spacing:1.4px;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    .project-info h3 { font-size:21px;margin:9px 0; }
+
+    .project-info p {
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.8;
+    }
+
+    .project-bottom {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:19px;
+    }
+
+    .project-bottom a {
+      font-size:12px;
+      font-weight:700;
+      color:#b49aff;
+    }
+
+    .project-tags {
+      display:flex;
+      gap:7px;
+      flex-wrap:wrap;
+    }
+
+    .project-tags span {
+      font-size:10px;
+      color:#aaaabd;
+      background:rgba(255,255,255,.055);
+      border-radius:5px;
+      padding:5px 8px;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .process-card {
+      border-top:1px solid rgba(148,104,255,.45);
+      padding:23px 17px 10px;
+      position:relative;
+    }
+
+    .process-number {
+      font-family:var(--heading);
+      color:#9d7aff;
+      font-size:31px;
+      font-weight:700;
+      margin-bottom:17px;
+    }
+
+    .process-card h3 { font-size:17px;margin-bottom:10px; }
+
+    .process-card p {
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    /* CTA */
+
+    .cta-box {
+      position:relative;
+      overflow:hidden;
+      border-radius:27px;
+      border:1px solid rgba(159,117,255,.26);
+      padding:75px 35px;
+      text-align:center;
+      background:
+        radial-gradient(ellipse at 15% 90%,rgba(117,72,244,.25),transparent 40%),
+        radial-gradient(ellipse at 85% 0%,rgba(47,193,220,.16),transparent 40%),
+        #11121f;
+    }
+
+    .cta-box h2 {
+      font-size:clamp(34px,5vw,52px);
+      letter-spacing:-2px;
+      max-width:700px;
+      margin:0 auto 17px;
+    }
+
+    .cta-box p {
+      color:var(--muted);
+      font-size:14px;
+      max-width:520px;
+      margin:0 auto 28px;
+    }
+
+    /* FAQ */
+
+    .faq-list { max-width:800px; }
+
+    .faq-item {
+      border-bottom:1px solid var(--border);
+    }
+
+    .faq-question {
+      width:100%;
+      background:none;
+      border:0;
+      color:white;
+      padding:23px 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      text-align:left;
+      font-family:var(--heading);
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      gap:20px;
+    }
+
+    .faq-question span:last-child {
+      color:#a88aff;
+      font-size:23px;
+      transition:.25s;
+    }
+
+    .faq-answer {
+      max-height:0;
+      overflow:hidden;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.9;
+      transition:max-height .35s ease,padding .35s;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height:180px;
+      padding-bottom:20px;
+    }
+
+    .faq-item.active .faq-question span:last-child {
+      transform:rotate(45deg);
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:40px;
+    }
+
+    .contact-info h2 {
+      font-size:clamp(33px,4vw,46px);
+      letter-spacing:-2px;
+      margin-bottom:15px;
+    }
+
+    .contact-info > p {
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.9;
+      margin-bottom:29px;
+    }
+
+    .contact-detail {
+      display:flex;
+      gap:14px;
+      align-items:center;
+      margin:21px 0;
+    }
+
+    .contact-icon {
+      width:43px;height:43px;
+      flex-shrink:0;
+      display:grid;place-items:center;
+      border-radius:12px;
+      background:rgba(145,101,255,.13);
+      font-size:18px;
+    }
+
+    .contact-detail small {
+      display:block;
+      color:#85869b;
+      font-size:11px;
+    }
+
+    .contact-detail strong {
+      display:block;
+      font-size:13px;
+      margin-top:3px;
+    }
+
+    .contact-form {
+      background:linear-gradient(145deg,#141525,#10111c);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:29px;
+    }
+
+    .form-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:17px;
+    }
+
+    .field { margin-bottom:17px; }
+
+    .field.full { grid-column:1/-1; }
+
+    .field label {
+      display:block;
+      font-size:12px;
+      color:#c4c4d3;
+      margin-bottom:8px;
+    }
+
+    .field input,.field select,.field textarea {
+      width:100%;
+      padding:13px 14px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      outline:none;
+      background:#0d0e18;
+      color:white;
+      font:13px var(--font);
+      transition:.2s;
+    }
+
+    .field input:focus,.field select:focus,.field textarea:focus {
+      border-color:#956aff;
+      box-shadow:0 0 0 3px rgba(149,106,255,.10);
+    }
+
+    .field textarea {
+      resize:vertical;
+      min-height:110px;
+    }
+
+    .field select option { background:#11121f; }
+
+    .contact-form .btn { width:100%; }
+
+    .form-note {
+      font-size:10px;
+      color:#77798d;
+      text-align:center;
+      margin-top:12px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding:65px 0 23px;
+      border-top:1px solid var(--border);
+      background:rgba(255,255,255,.012);
+    }
+
+    .footer-grid {
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr 1fr;
+      gap:40px;
+      padding-bottom:48px;
+    }
+
+    .footer-brand p {
+      color:var(--muted);
+      font-size:12px;
+      max-width:280px;
+      line-height:1.9;
+      margin-top:17px;
+    }
+
+    .footer-col h4 {
+      font-family:var(--font);
+      font-size:13px;
+      margin-bottom:19px;
+    }
+
+    .footer-col a {
+      display:block;
+      color:#9293a7;
+      font-size:12px;
+      margin:12px 0;
+      transition:.2s;
+    }
+
+    .footer-col a:hover { color:#b49aff; }
+
+    .footer-bottom {
+      border-top:1px solid var(--border);
+      padding-top:22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:15px;
+      color:#74768b;
+      font-size:11px;
+    }
+
+    .footer-bottom a { color:#aaa0cf; }
+
+    /* WHATSAPP FLOAT */
+
+    .whatsapp-float {
+      position:fixed;
+      right:23px;
+      bottom:23px;
+      z-index:900;
+      width:54px;height:54px;
+      display:grid;
+      place-items:center;
+      background:#20c978;
+      color:white;
+      border-radius:50%;
+      font-size:25px;
+      box-shadow:0 8px 25px rgba(32,201,120,.3);
+      transition:.25s;
+    }
+
+    .whatsapp-float:hover { transform:translateY(-5px) scale(1.05); }
+
+    /* REVEAL */
+
+    .reveal {
+      opacity:0;
+      transform:translateY(25px);
+      transition:opacity .7s ease,transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px) {
+      .hero-grid { grid-template-columns:1fr; }
+      .hero { padding-top:145px; }
+      .hero-content { max-width:720px; }
+      .hero-visual { min-height:430px; }
+      .services-grid { grid-template-columns:repeat(2,1fr); }
+      .about-grid { gap:35px; }
+      .process-grid { grid-template-columns:repeat(2,1fr); }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+
+    @media(max-width:700px) {
+      .container { width:min(100% - 32px,1160px); }
+      .section { padding:75px 0; }
+      .nav-inner { height:68px; }
+      .menu-toggle { display:block; }
+      .nav-cta { display:none; }
+
+      .nav-links {
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;right:0;
+        padding:22px;
+        background:#10111d;
+        border-bottom:1px solid var(--border);
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+      }
+
+      .nav-links.open { display:flex; }
+
+      .nav-links a {
+        display:block;
+        padding:13px 5px;
+        border-bottom:1px solid var(--border);
+      }
+
+      .hero {
+        min-height:auto;
+        padding:130px 0 70px;
+      }
+
+      .hero h1 {
+        font-size:clamp(43px,11vw,64px);
+        letter-spacing:-2.7px;
+      }
+
+      .hero-copy { font-size:14px; }
+      .hero-visual { min-height:370px; }
+      .orbit { width:300px;height:300px; }
+      .orbit.two { width:230px;height:230px; }
+      .dashboard { max-width:350px; }
+      .floating-card.one { right:0;top:10px; }
+      .floating-card.two { left:0;bottom:10px; }
+
+      .tech-inner { justify-content:center;text-align:center; }
+      .tech-list { justify-content:center;gap:17px; }
+      .tech-list span { font-size:12px; }
+
+      .services-grid { grid-template-columns:1fr; }
+      .about-grid { grid-template-columns:1fr; }
+      .about-visual { min-height:300px; }
+      .about-symbol { font-size:120px; }
+      .portfolio-grid { grid-template-columns:1fr; }
+      .process-grid { grid-template-columns:1fr 1fr; }
+      .contact-grid { grid-template-columns:1fr;gap:30px; }
+      .footer-grid { grid-template-columns:1fr 1fr;gap:30px 20px; }
+
+      .cta-box { padding:55px 20px; }
+      .footer-bottom { flex-direction:column;text-align:center; }
+    }
+
+    @media(max-width:420px) {
+      .hero-actions { flex-direction:column; }
+      .hero-actions .btn { width:100%; }
+      .process-grid { grid-template-columns:1fr; }
+      .form-grid { grid-template-columns:1fr; }
+      .field.full { grid-column:auto; }
+      .about-points { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      *,*::before,*::after {
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        scroll-behavior:auto !important;
+        transition-duration:.01ms !important;
+      }
+      .reveal { opacity:1;transform:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        <span class="logo-icon">M</span>
+        Mista<span>Hub.</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary nav-cta">Let's Talk ↗</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <div class="hero-badge">
+            <span class="pulse"></span>
+            YOUR DIGITAL GROWTH PARTNER
+          </div>
+
+          <h1>
+            We Build<br>
+            <span class="gradient-text">Digital Things</span><br>
+            That Matter.
+          </h1>
+
+          <p class="hero-copy">
+            From stunning websites to powerful applications, we turn ambitious
+            ideas into digital experiences that help businesses grow, connect
+            and stand out.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              Start Your Project <span>↗</span>
+            </a>
+
+            <a href="#work" class="btn btn-outline">
+              Explore Our Work <span>→</span>
+            </a>
+          </div>
+
+          <p class="hero-note">
+            <strong>Websites · Apps · Software · SEO</strong>
+            <br>Built with purpose. Designed for people.
+          </p>
+
+        </div>
+
+        <div class="hero-visual reveal">
+
+          <div class="orbit"><span class="orbit-dot"></span></div>
+          <div class="orbit two"><span class="orbit-dot"></span></div>
+
+          <div class="dashboard">
+
+            <div class="dash-top">
+              <div class="dash-brand">
+                <span class="dash-brand-icon">✦</span>
+                MistaHub Studio
+              </div>
+              <span class="dash-status">● Building</span>
+            </div>
+
+            <span class="dash-label">YOUR NEXT BIG IDEA</span>
+            <div class="dash-title">Made Possible.</div>
+
+            <div class="dash-stats">
+              <div class="stat-box">
+                <span>Web Development</span>
+                <strong>01</strong>
+              </div>
+
+              <div class="stat-box">
+                <span>Mobile Apps</span>
+                <strong>02</strong>
+              </div>
+
+              <div class="stat-box">
+                <span>Custom Software</span>
+                <strong>03</strong>
+              </div>
+
+              <div class="stat-box">
+                <span>Digital Growth</span>
+                <strong>04</strong>
+              </div>
+            </div>
+
+            <div class="chart">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+
+          </div>
+
+          <div class="floating-card one">
+            ✦ Creative Ideas
+            <strong>Meet Technology</strong>
+          </div>
+
+          <div class="floating-card two">
+            ⚡ Built for the Future
+            <strong>Ready to Scale</strong>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGIES -->
+    <section class="tech-strip">
+      <div class="container tech-inner">
+
+        <div class="tech-label">TECHNOLOGIES WE WORK WITH</div>
+
+        <div class="tech-list">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>Flutter</span>
+          <span>Laravel</span>
+          <span>JavaScript</span>
+          <span>Firebase</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">WHAT WE DO</span>
+          <h2>Technology that<br><span class="gradient-text">moves you forward.</span></h2>
+          <p>
+            We combine creative thinking, modern engineering and practical
+            solutions to build digital products that solve real problems.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+            <div class="service-icon">🌐</div>
+            <h3>Website Development</h3>
+            <p>
+              Fast, responsive and beautiful websites that communicate your
+              brand, engage visitors and help convert them into customers.
+            </p>
+            <a href="#contact" class="service-link">Discuss your website ↗</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">⚙️</div>
+            <h3>Web Applications</h3>
+            <p>
+              Powerful custom web applications, dashboards, SaaS platforms,
+              admin panels and business management systems.
+            </p>
+            <a href="#contact" class="service-link">Build an application ↗</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">📱</div>
+            <h3>Mobile App Development</h3>
+            <p>
+              Modern Android and iOS applications with thoughtful interfaces,
+              reliable functionality and scalable architecture.
+            </p>
+            <a href="#contact" class="service-link">Build your app ↗</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Clean, intuitive and user-focused interfaces that make your
+              product easier to understand and enjoyable to use.
+            </p>
+            <a href="#contact" class="service-link">Design your product ↗</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🚀</div>
+            <h3>SEO & Digital Growth</h3>
+            <p>
+              Technical SEO, website optimization, search visibility and
+              digital improvements that help your business get discovered.
+            </p>
+            <a href="#contact" class="service-link">Grow your business ↗</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">🧩</div>
+            <h3>Custom Software</h3>
+            <p>
+              Tailored software, API integrations, automation and practical
+              technology solutions designed around your workflow.
+            </p>
+            <a href="#contact" class="service-link">Discuss your idea ↗</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-visual reveal">
+          <div class="about-chip a">✦ Ideas into reality</div>
+          <div class="about-symbol">MH</div>
+          <div class="about-chip b">⚡ Technology with purpose</div>
+        </div>
+
+        <div class="about-content reveal">
+
+          <span class="eyebrow">ABOUT MISTAHUB</span>
+
+          <h2>
+            Small details.<br>
+            <span class="gradient-text">Big possibilities.</span>
+          </h2>
+
+          <p>
+            MistaHub is a technology-focused digital solutions brand based
+            in Bihar, India. We work on websites, applications, software
+            and digital products that make everyday work simpler and more
+            effective.
+          </p>
+
+          <p>
+            Our approach is straightforward: understand the problem, choose
+            the right technology and build a solution that works for the
+            people who use it.
+          </p>
+
+          <div class="about-points">
+
+            <div class="about-point"><span class="check">✓</span> Custom solutions</div>
+            <div class="about-point"><span class="check">✓</span> Modern technology</div>
+            <div class="about-point"><span class="check">✓</span> Responsive experiences</div>
+            <div class="about-point"><span class="check">✓</span> Performance focused</div>
+            <div class="about-point"><span class="check">✓</span> Practical problem solving</div>
+            <div class="about-point"><span class="check">✓</span> Ongoing support</div>
+
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Let's Build Together ↗</a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section" id="work">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">SELECTED WORK</span>
+          <h2>Ideas turned into<br><span class="gradient-text">digital experiences.</span></h2>
+          <p>
+            Explore products and digital experiences from the MistaHub ecosystem.
+            Each project represents a different approach to solving practical problems.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <article class="project-card reveal">
+
+            <div class="project-preview">
+              <div class="mock-window">
+                <div class="mock-top"><i></i><i></i><i></i></div>
+                <div class="mock-content">
+                  <div class="mock-title">Business Dashboard</div>
+                  <div class="mock-line"></div>
+                  <div class="mock-line short"></div>
+                  <div class="mock-blocks">
+                    <div class="mock-block"></div>
+                    <div class="mock-block"></div>
+                    <div class="mock-block"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <span class="project-category">BUSINESS SOFTWARE</span>
+              <h3>Business & Billing Solutions</h3>
+              <p>
+                Digital tools designed to simplify everyday business operations,
+                billing workflows and management tasks.
+              </p>
+              <div class="project-bottom">
+                <div class="project-tags">
+                  <span>Web</span><span>Dashboard</span>
+                </div>
+                <a href="https://mistahub.in/info" target="_blank" rel="noopener noreferrer">Explore ↗</a>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-preview">
+              <div class="mock-window">
+                <div class="mock-top"><i></i><i></i><i></i></div>
+                <div class="mock-content">
+                  <div class="mock-title">AutoPrint</div>
+                  <div class="mock-line"></div>
+                  <div class="mock-line short"></div>
+                  <div class="mock-blocks">
+                    <div class="mock-block"></div>
+                    <div class="mock-block"></div>
+                    <div class="mock-block"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <span class="project-category">WORKFLOW AUTOMATION</span>
+              <h3>AutoPrint</h3>
+              <p>
+                A digital document submission and printing workflow platform
+                designed for participating print shops.
+              </p>
+              <div class="project-bottom">
+                <div class="project-tags">
+                  <span>Automation</span><span>Web</span>
+                </div>
+                <a href="https://autoprint.mistahub.in/" target="_blank" rel="noopener noreferrer">Explore ↗</a>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-preview">
+              <div class="mock-window">
+                <div class="mock-top"><i></i><i></i><i></i></div>
+                <div class="mock-content">
+                  <div class="mock-title">Image Compressor</div>
+                  <div class="mock-line"></div>
+                  <div class="mock-line short"></div>
+                  <div class="mock-blocks">
+                    <div class="mock-block"></div>
+                    <div class="mock-block"></div>
+                    <div class="mock-block"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <span class="project-category">WEB UTILITIES</span>
+              <h3>MistaHub Tools</h3>
+              <p>
+                A collection of useful web utilities including image compression,
+                calculators, image tools and productivity applications.
+              </p>
+              <div class="project-bottom">
+                <div class="project-tags">
+                  <span>Web Apps</span><span>Utilities</span>
+                </div>
+                <a href="https://mistahub.in/info" target="_blank" rel="noopener noreferrer">Explore ↗</a>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-preview">
+              <div class="mock-window">
+                <div class="mock-top"><i></i><i></i><i></i></div>
+                <div class="mock-content">
+                  <div class="mock-title">Payment Infrastructure</div>
+                  <div class="mock-line"></div>
+                  <div class="mock-line short"></div>
+                  <div class="mock-blocks">
+                    <div class="mock-block"></div>
+                    <div class="mock-block"></div>
+                    <div class="mock-block"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <span class="project-category">PAYMENT TECHNOLOGY</span>
+              <h3>MistaHub Payment Platform</h3>
+              <p>
+                Payment-related tools, developer documentation and integration
+                workflows within the MistaHub ecosystem.
+              </p>
+              <div class="project-bottom">
+                <div class="project-tags">
+                  <span>APIs</span><span>Integration</span>
+                </div>
+                <a href="https://pay.mistahub.in/" target="_blank" rel="noopener noreferrer">Explore ↗</a>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">HOW WE WORK</span>
+          <h2>From first conversation<br>to <span class="gradient-text">final launch.</span></h2>
+          <p>
+            A clear and collaborative process keeps your project focused,
+            organized and moving in the right direction.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-card reveal">
+            <div class="process-number">01</div>
+            <h3>Discover</h3>
+            <p>We understand your business, goals, users and the problem you want to solve.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">02</div>
+            <h3>Plan & Design</h3>
+            <p>We define the scope, plan the experience and choose the right technical approach.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">03</div>
+            <h3>Build & Test</h3>
+            <p>We develop the solution, test important workflows and refine the experience.</p>
+          </article>
+
+          <article class="process-card reveal">
+            <div class="process-number">04</div>
+            <h3>Launch & Support</h3>
+            <p>We help launch the product and can continue supporting its improvement.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+
+        <div class="cta-box reveal">
+
+          <span class="eyebrow">HAVE AN IDEA?</span>
+
+          <h2>
+            Your next big idea<br>
+            deserves a <span class="gradient-text">great build.</span>
+          </h2>
+
+          <p>
+            Whether you need a website, an application or a custom software
+            solution, let's talk about what you want to create.
+          </p>
+
+          <a href="#contact" class="btn btn-primary">
+            Tell Us About Your Project ↗
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <span class="eyebrow">GOT QUESTIONS?</span>
+          <h2>Frequently asked <span class="gradient-text">questions.</span></h2>
+          <p>Some useful answers before we start working together.</p>
+        </div>
+
+        <div class="faq-list reveal">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What services does MistaHub offer?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              MistaHub works on website development, web applications,
+              mobile app development, UI/UX design, SEO and custom software solutions.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How much does a website or application cost?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Pricing depends on the project requirements, features, complexity
+              and timeline. Contact us with your requirements to discuss a suitable quote.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Can you build custom business software?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. We can discuss custom dashboards, business tools,
+              automation workflows, APIs and other software requirements.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you work with clients outside Bihar?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Yes. We are based in Bihar, India and can discuss projects
+              with clients from other locations through remote collaboration.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How can I start a project?
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              Send us your project requirements through the contact form
+              or WhatsApp. We can discuss the scope and next steps.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-info reveal">
+
+          <span class="eyebrow">LET'S CONNECT</span>
+
+          <h2>
+            Let's create<br>
+            something <span class="gradient-text">great.</span>
+          </h2>
+
+          <p>
+            Have a project in mind? Tell us what you're planning.
+            Let's discuss how technology can help bring your idea to life.
+          </p>
+
+          <div class="contact-detail">
+            <div class="contact-icon">📞</div>
+            <div>
+              <small>Call / WhatsApp</small>
+              <strong>+91 78706 92939</strong>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div>
+              <small>Our Location</small>
+              <strong>Gaiwal Bigha, Aurangabad, Bihar 824103</strong>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">🌐</div>
+            <div>
+              <small>Website</small>
+              <strong>agency.mistahub.in</strong>
+            </div>
+          </div>
+
+          <a class="btn btn-outline"
+             href="https://wa.me/917870692939"
+             target="_blank"
+             rel="noopener noreferrer">
+            Chat on WhatsApp ↗
+          </a>
+
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="name">Your Name *</label>
+              <input id="name" name="name" type="text" placeholder="John Doe" maxlength="80" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number *</label>
+              <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" maxlength="20" autocomplete="tel" required>
+            </div>
+
+            <div class="field full">
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" maxlength="120" autocomplete="email">
+            </div>
+
+            <div class="field full">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option>Website Development</option>
+                <option>Web Application</option>
+                <option>Mobile App Development</option>
+                <option>UI/UX Design</option>
+                <option>SEO & Digital Growth</option>
+                <option>Custom Software</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="message">Tell us about your project *</label>
+              <textarea id="message" name="message" maxlength="2000" placeholder="I want to build..." required></textarea>
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Send Enquiry via WhatsApp ↗
+          </button>
+
+          <p class="form-note">
+            Your enquiry will open in WhatsApp so you can review and send it.
+          </p>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-icon">M</span>
+            Mista<span>Hub.</span>
+          </a>
+
+          <p>
+            We build digital experiences, useful applications and
+            technology solutions that help businesses move forward.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#work">Our Work</a>
+          <a href="#process">Our Process</a>
+          <a href="#faq">FAQs</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#services">Website Development</a>
+          <a href="#services">Web Applications</a>
+          <a href="#services">Mobile Apps</a>
+          <a href="#services">UI/UX Design</a>
+          <a href="#services">SEO & Software</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://wa.me/917870692939" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="tel:+917870692939">Call Us</a>
+          <a href="https://mistahub.in/" target="_blank" rel="noopener noreferrer">MistaHub</a>
+          <a href="#contact">Start a Project</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> MistaHub. All rights reserved.</span>
+        <span>Designed with purpose. Built with <a href="#home">MistaHub</a> ✦</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/917870692939"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with MistaHub on WhatsApp">
+    ☎
+  </a>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("scrolled", window.scrollY > 20);
+    }, { passive: true });
+
+
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.textContent = "☰";
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      observer.observe(element);
+    });
+
+
+    // FAQ accordion
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const current = button.parentElement;
+        const wasActive = current.classList.contains("active");
+
+        document.querySelectorAll(".faq-item").forEach(item => {
+          item.classList.remove("active");
+        });
+
+        if (!wasActive) current.classList.add("active");
+      });
+    });
+
+
+    // Contact form -> WhatsApp
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (!this.reportValidity()) return;
+
+      const data = new FormData(this);
+
+      const name = String(data.get("name") || "").trim();
+      const phone = String(data.get("phone") || "").trim();
+      const email = String(data.get("email") || "").trim();
+      const service = String(data.get("service") || "").trim();
+      const message = String(data.get("message") || "").trim();
+
+      const text = [
+        "Hello MistaHub! I would like to discuss a project.",
+        "",
+        "Name: " + name,
+        "Phone: " + phone,
+        "Email: " + (email || "Not provided"),
+        "Service: " + (service || "Not selected"),
+        "",
+        "Project Details:",
+        message
+      ].join("\n");
+
+      const url = "https://wa.me/917870692939?text=" + encodeURIComponent(text);
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+
+
+    // Dynamic copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
